@@ -1,0 +1,14 @@
+[
+  { "id": "AT-101", "projectId": "atlas", "status": "todo", "title": "Map the import flow" },
+  { "id": "AT-102", "projectId": "atlas", "status": "in_progress", "title": "Add import progress" },
+  { "id": "AT-103", "projectId": "atlas", "status": "done", "title": "Confirm export columns" },
+  { "id": "AT-104", "projectId": "atlas", "status": "todo", "title": "Draft release notes" },
+  { "id": "AT-105", "projectId": "atlas", "status": "in_progress", "title": "Review empty states" },
+  { "id": "AT-106", "projectId": "atlas", "status": "todo", "title": "Check task ordering" },
+  { "id": "AT-107", "projectId": "atlas", "status": "done", "title": "Review labels, titles and IDs" },
+  { "id": "AT-108", "projectId": "atlas", "status": "todo", "title": "Write import guide" },
+  { "id": "AT-109", "projectId": "atlas", "status": "done", "title": "Verify \"Completed\" status" },
+  { "id": "AT-110", "projectId": "atlas", "status": "in_progress", "title": "Update sample data" },
+  { "id": "OR-201", "projectId": "orbit", "status": "done", "title": "Finalize project brief" },
+  { "id": "OR-202", "projectId": "orbit", "status": "todo", "title": "Review milestone dates" }
+]
