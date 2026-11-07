@@ -33,7 +33,7 @@ export function handle(request) {
   if (pathname === "/api/tasks") return Response.json({ tasks: selectTasks(projectId, status) });
 
   const columns = ["id", "title", "status", "projectId"];
-  const rows = selectTasks(projectId).map((task) => columns.map((key) => csvCell(task[key])).join(","));
+  const rows = selectTasks(projectId, status).map((task) => columns.map((key) => csvCell(task[key])).join(","));
   return new Response([columns.join(","), ...rows, ""].join("\r\n"), {
     headers: {
       "Content-Type": "text/csv; charset=utf-8",
