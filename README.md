@@ -1,12 +1,27 @@
-# Project workspace target
+# Taskroom
 
-A small, dependency-free Node.js 22 target for the Switch App Feedback demo. It has two fictional projects, a task-list API, and a downloadable CSV export. It is separate from the feedback automation repository and contains no credentials or real user data.
+Taskroom is a small React workspace with two fictional projects, status filters,
+and a CSV preview and download. It uses Vite, Tailwind CSS, and shadcn/ui. Both the
+browser and the standalone Node server use the same task API.
 
-Run `npm start`, then compare:
+## Run locally
 
-```bash
-curl 'http://127.0.0.1:3000/api/tasks?projectId=atlas&status=done'
-curl 'http://127.0.0.1:3000/api/export?projectId=atlas&status=done'
+Use Node.js 22.19 or later on the Node 22 release line.
+
+```sh
+npm ci
+npm run dev
 ```
 
-The baseline intentionally contains the reported defect: the list shows three completed tasks, while the CSV contains all ten tasks in Atlas. The fix branch adds a regression test and restores the export filter. This is a backend-only demo; API responses and tests provide verification evidence.
+Open the local URL shown by Vite. Run `npm run build` to type-check and build the
+client, then `npm run preview` to serve the built app with the same demo API.
+`npm start` starts the standalone API on port 3000.
+
+## Reproduce the export defect
+
+1. Open Atlas and set **Status** to **Completed**. The list shows three tasks.
+2. Select **Preview CSV**. The preview reads the actual CSV from the export API,
+   which returns all ten Atlas tasks on this branch.
+3. Select **Download CSV** to save that same export as a file.
+
+The expected result is three rows, all completed. The sample data is fictional.

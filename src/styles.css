@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--card);
+  --color-secondary: var(--muted);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--muted);
+  --color-accent-foreground: var(--foreground);
+  --color-destructive: #171717;
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: #525252;
+}
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --card: #fff;
+  --muted: #f4f4f4;
+  --muted-foreground: #5e5e5e;
+  --border: #dedede;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply m-0 min-w-80 bg-background font-sans text-foreground antialiased; }
+  ::selection { @apply bg-neutral-900 text-white; }
+}
